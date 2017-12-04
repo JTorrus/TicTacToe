@@ -1,4 +1,4 @@
 public class Cell {
-    boolean inUse;
-    Player player;
+    private boolean inUse;
+    private Player player;
 }
