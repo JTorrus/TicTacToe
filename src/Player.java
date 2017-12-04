@@ -2,9 +2,8 @@ public class Player {
     private String name;
     private String selection;
 
-    public Player(String name, String selection) {
+    public Player(String name) {
         this.name = name;
-        this.selection = selection;
     }
 
     public String getName() {

@@ -2,9 +2,8 @@ public class Cell {
     private boolean inUse;
     private Player player;
 
-    public Cell(boolean inUse, Player player) {
+    public Cell(boolean inUse) {
         this.inUse = inUse;
-        this.player = player;
     }
 
     public boolean isInUse() {
@@ -21,5 +20,10 @@ public class Cell {
 
     public void setPlayer(Player player) {
         this.player = player;
+    }
+
+    @Override
+    public String toString() {
+        return "*";
     }
 }
