@@ -1,28 +1,25 @@
 public class Cell {
     private boolean inUse;
-    private Player player;
     private String form;
+    private int id;
 
-    public Cell(boolean inUse) {
+    public Cell(boolean inUse, int id) {
         this.inUse = inUse;
         this.form = "*";
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public boolean isInUse() {
         return inUse;
     }
 
-    public Player getPlayer() {
-        return player;
-    }
-
-    public void setInUse() {
+    public void setInUse(String form) {
         this.inUse = true;
-        this.form="O";
-    }
-
-    public void setPlayer(Player player) {
-        this.player = player;
+        this.form = form;
     }
 
     public String getForm() {
