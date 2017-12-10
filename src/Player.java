@@ -30,9 +30,9 @@ public class Player {
         Cell[][] cells = board.getCells();
         int posX;
         int posY;
-        System.out.println("Insert col position");
+        System.out.println("Insert col position ("+this.name+')');
         posX = sc.nextInt();
-        System.out.println("Insert row position");
+        System.out.println("Insert row position ("+this.name+')');
         posY = sc.nextInt();
 
         if (cells[posY][posX].isInUse()){

@@ -14,11 +14,13 @@ public class Board {
     }
 
     public Cell[][] createBoard() {
+        int id = 1;
         Cell[][] cells = new Cell[3][3];
 
         for (int i = 0; i < cells.length; i++) {
             for (int j = 0; j < cells[i].length; j++) {
-                cells[i][j] = new Cell(false, j, i);
+                cells[i][j] = new Cell(false,id);
+                id++;
             }
         }
 

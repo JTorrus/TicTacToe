@@ -1,22 +1,16 @@
 public class Cell {
     private boolean inUse;
     private String form;
-    private int col;
-    private int row;
+    private int id;
 
-    public Cell(boolean inUse, int col, int row) {
+    public Cell(boolean inUse, int id) {
         this.inUse = inUse;
         this.form = "*";
-        this.col = col;
-        this.row = row;
+        this.id = id;
     }
 
-    public int getCol() {
-        return col;
-    }
-
-    public int getRow() {
-        return row;
+    public int getId() {
+        return id;
     }
 
     public boolean isInUse() {
