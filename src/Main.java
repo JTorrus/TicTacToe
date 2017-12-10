@@ -12,6 +12,9 @@ public class Main {
 
         board.showBoard();
 
+        for (int i = 0; i < 9; i++) {
+            makePlay(board);
+        }
     }
 
 
@@ -30,5 +33,23 @@ public class Main {
         players.add(player1);
         players.add(player2);
         return players;
+    }
+
+
+    static void makePlay(Board board){
+        Cell[][] cells = board.getCells();
+        int posX;
+        int posY;
+        System.out.println("Insert col position");
+        posX = sc.nextInt();
+        System.out.println("Insert row position");
+        posY = sc.nextInt();
+
+        if (cells[posY][posX].isInUse()){
+            System.out.println("This cell is already in use");
+        }else{
+            cells[posY][posX].setInUse();
+            board.showBoard();
+        }
     }
 }

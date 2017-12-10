@@ -32,10 +32,12 @@ public class Board {
     public void showBoard() {
         for (int i = 0; i < cells.length; i++) {
             for (int j = 0; j < cells[i].length; j++) {
-                System.out.print(cells[i][j] + " ");
+                System.out.print(cells[i][j].getForm() + " ");
             }
 
             System.out.println(" ");
         }
     }
+
+
 }

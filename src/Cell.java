@@ -1,9 +1,11 @@
 public class Cell {
     private boolean inUse;
     private Player player;
+    private String form;
 
     public Cell(boolean inUse) {
         this.inUse = inUse;
+        this.form = "*";
     }
 
     public boolean isInUse() {
@@ -14,16 +16,16 @@ public class Cell {
         return player;
     }
 
-    public void setInUse(boolean inUse) {
-        this.inUse = inUse;
+    public void setInUse() {
+        this.inUse = true;
+        this.form="O";
     }
 
     public void setPlayer(Player player) {
         this.player = player;
     }
 
-    @Override
-    public String toString() {
-        return "*";
+    public String getForm() {
+        return form;
     }
 }
