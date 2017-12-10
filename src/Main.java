@@ -13,6 +13,7 @@ public class Main {
         while (true) {
             for (Player current: players) {
                 current.makePlay(board);
+                if (checkFinish(current)) break;
             }
         }
 
@@ -38,10 +39,19 @@ public class Main {
 
     static boolean checkFinish(Player player){
         boolean finish = false;
+        int resultCol = 0;
+        int resultRow = 0;
 
         if (player.getCellsQty()>=3){
             for (Cell cell: player.getCellsSelected()){
+                resultCol += cell.getCol();
+                resultRow += cell.getRow();
             }
+            if ((resultCol+resultRow)%3==0){
+                finish = true;
+                System.out.println("Congratulations, "+player.getName()+" has Won!!!");
+            }
+
         }
 
         return finish;
