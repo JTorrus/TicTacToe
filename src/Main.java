@@ -5,12 +5,16 @@ public class Main {
     static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         ArrayList<Player> players = insertPlayers();
-
         Board board = new Board(players.get(0),players.get(1));
 
         board.createBoard();
-
         board.showBoard();
+
+        while (true) {
+            for (Player current: players) {
+                current.makePlay(board);
+            }
+        }
 
     }
 
