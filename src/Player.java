@@ -46,7 +46,7 @@ public class Player {
         if (cells[posY][posX].isInUse()){
             System.out.println("This cell is already in use");
         }else{
-            cells[posY][posX].setInUse();
+            cells[posY][posX].setInUse(this.getSelection());
             cellsSelected.add(cells[posY][posX]);
             board.showBoard();
         }
