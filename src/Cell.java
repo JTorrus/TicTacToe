@@ -18,7 +18,7 @@ public class Cell {
 
     public void setInUse() {
         this.inUse = true;
-        this.form="O";
+        this.form = player.getSelection();
     }
 
     public void setPlayer(Player player) {
