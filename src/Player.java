@@ -24,14 +24,6 @@ public class Player {
         return selection;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setSelection(String selection) {
-        this.selection = selection;
-    }
-
     public void makePlay(Board board){
         Scanner sc = new Scanner(System.in);
 
@@ -51,4 +43,9 @@ public class Player {
             board.showBoard();
         }
     }
+
+    public int getCellsQty(){
+        return cellsSelected.size();
+    }
+
 }

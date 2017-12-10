@@ -13,16 +13,12 @@ public class Board {
         return cells;
     }
 
-    public void setCells(Cell[][] cells) {
-        this.cells = cells;
-    }
-
     public Cell[][] createBoard() {
         Cell[][] cells = new Cell[3][3];
 
         for (int i = 0; i < cells.length; i++) {
             for (int j = 0; j < cells[i].length; j++) {
-                cells[i][j] = new Cell(false);
+                cells[i][j] = new Cell(false, j, i);
             }
         }
 

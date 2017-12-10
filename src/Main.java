@@ -35,4 +35,16 @@ public class Main {
         players.add(player2);
         return players;
     }
+
+    static boolean checkFinish(Player player){
+        boolean finish = false;
+
+        if (player.getCellsQty()>=3){
+            for (Cell cell: player.getCellsSelected()){
+            }
+        }
+
+        return finish;
+    }
+
 }
