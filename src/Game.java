@@ -123,5 +123,12 @@ public class Game {
         }
 
         if (restart.equalsIgnoreCase("y")) startGame();
+        else {
+            Player player1 = players.get(0);
+            Player player2 = players.get(1);
+
+            System.out.println(player1.getName()+" has "+player1.getVictories()+" victories\n"+player2.getName()+" has "+player2.getVictories() + " victories");
+
+        }
     }
 }

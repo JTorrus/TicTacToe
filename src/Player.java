@@ -54,4 +54,7 @@ public class Player {
         this.victories++;
     }
 
+    public int getVictories() {
+        return victories;
+    }
 }
